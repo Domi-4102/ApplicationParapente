@@ -9,8 +9,8 @@ namespace ApplicationParapente.Model
         public int Id { get; set; }
         public string NumeroHomologation { get; set; }
         public DateTime DateHomologation { get; set; }
-        public Decimal Taille { get; set; }
-        public Decimal PoidsMin { get; set; }
-        public Decimal PoidsMax { get; set; }
+        public decimal Taille { get; set; }
+        public decimal PoidsMin { get; set; }
+        public decimal PoidsMax { get; set; }
     }
 }
