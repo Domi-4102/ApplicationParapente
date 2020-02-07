@@ -4,8 +4,7 @@ using System.Text;
 
 namespace ApplicationParapente.DataAccess
 {
-    public interface IRepository<TEntity, Tkey> where TEntity : ApplicationParapente.Model.Models
-
+    public interface IRepository<TEntity, Tkey>
     {
         TEntity GetById(Tkey id);
         IEnumerable<TEntity> GetAll();

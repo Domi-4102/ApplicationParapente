@@ -4,7 +4,8 @@ using System.Text;
 
 namespace ApplicationParapente.DataAccess
 {
-    class Repository
+    public interface IConnectionStringProvider
     {
+        string ConnectionString { get; }
     }
 }
