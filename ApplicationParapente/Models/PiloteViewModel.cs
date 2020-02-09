@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ApplicationParapente.Models
 {
-    public class Pilote
+    public class PiloteViewModel
     {
         #region Properties
         public int IdPilote { get; set; }
