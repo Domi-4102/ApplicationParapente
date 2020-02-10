@@ -30,8 +30,8 @@ namespace ApplicationParapente
         public void ConfigureServices(IServiceCollection services)
         {
 
-           
-            services.AddDbContext<ParapenteContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddTransient<IPiloteRepository, PiloteRepository>();
 
             services.AddMvc();
         }
