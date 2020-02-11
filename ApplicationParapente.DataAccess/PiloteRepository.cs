@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using ApplicationParapente.DataAccess.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Parapente.Data;
 using Parapente.Data.Entities;
 
@@ -12,10 +13,11 @@ namespace ApplicationParapente.DataAccess
     public class PiloteRepository : IPiloteRepository
     {
         private readonly ParapenteContext _dataContext;
-        
+
         public PiloteRepository()
         {
-            _dataContext = new ParapenteContext();
+            var optionsBuilder = new DbContextOptionsBuilder<ParapenteContext>();
+            _dataContext = new ParapenteContext(optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Parapente").Options);
         }
 
         void IRepository<Pilote, int>.Delete(Pilote entity)
