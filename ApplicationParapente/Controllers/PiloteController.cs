@@ -15,7 +15,7 @@ namespace ApplicationParapente.Controllers
     [ApiController]
     public class PiloteController : ControllerBase
     {
-        public IPiloteRepository Pil { get; }
+        public IRepository<Pilote,int> Pil { get; }
 
         // GET: api/Pilote
         [HttpGet]

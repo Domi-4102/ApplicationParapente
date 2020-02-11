@@ -11,31 +11,31 @@ namespace ApplicationParapente.DataAccess
 {
     public class PiloteRepository : IPiloteRepository
     {
-        public ParapenteContext DataContext { get; }
+        private readonly ParapenteContext _dataContext;
 
         void IRepository<Pilote, int>.Delete(Pilote entity)
         {
-            DataContext.Set<Pilote>().Remove(entity);
+            _dataContext.Set<Pilote>().Remove(entity);
         }
 
         IEnumerable<Pilote> IRepository<Pilote, int>.GetAll()
         {
-            return DataContext.Set<Pilote>().ToList();
+            return _dataContext.Set<Pilote>().ToList();
         }
 
         Pilote IRepository<Pilote, int>.GetById(int id)
         {
-            return DataContext.Set<Pilote>().FirstOrDefault(e => e.IdPilote == id);
+            return _dataContext.Set<Pilote>().FirstOrDefault(e => e.IdPilote == id);
         }
 
         void IRepository<Pilote, int>.Insert(Pilote entity)
         {
-            DataContext.Set<Pilote>().Add(entity);
+            _dataContext.Set<Pilote>().Add(entity);
         }
 
         void IRepository<Pilote, int>.Update(Pilote entity)
         {
-            var editedEntity = DataContext.Set<Pilote>().FirstOrDefault(e => e.IdPilote == entity.IdPilote);
+            var editedEntity = _dataContext.Set<Pilote>().FirstOrDefault(e => e.IdPilote == entity.IdPilote);
         }
     }
 }
