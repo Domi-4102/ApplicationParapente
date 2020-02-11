@@ -12,6 +12,11 @@ namespace ApplicationParapente.DataAccess
     public class PiloteRepository : IPiloteRepository
     {
         private readonly ParapenteContext _dataContext;
+        
+        public PiloteRepository()
+        {
+            _dataContext = new ParapenteContext();
+        }
 
         void IRepository<Pilote, int>.Delete(Pilote entity)
         {
