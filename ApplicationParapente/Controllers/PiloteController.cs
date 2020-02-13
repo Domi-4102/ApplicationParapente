@@ -44,16 +44,17 @@ namespace ApplicationParapente.Controllers
 
         // PUT: api/Pilote/5
         [HttpPut("{id}")]
-        public void Put([FromBody] Pilote entity)
+        public void Put(int id,[FromBody] Pilote entity)
         {
+            entity.IdPilote = id;
             _piloteRepository.Update(entity);
         }
 
-        // DELETE: api/ApiWithActions/5
+        // DELETE: /api/Pilote/2
         [HttpDelete("{id}")]
-        public void Delete(Pilote entity)
+        public void Delete(int id)
         {
-            _piloteRepository.Delete(entity);
+            _piloteRepository.Delete(id);
         }
     }
 }

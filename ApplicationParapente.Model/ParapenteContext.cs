@@ -9,6 +9,7 @@ namespace Parapente.Data
         public ParapenteContext(DbContextOptions<ParapenteContext> options)
             : base(options)
         {
+           
         }
 
         #region Generated Properties

@@ -9,7 +9,7 @@ namespace ApplicationParapente.DataAccess.Interfaces
         TEntity GetById(Tkey id);
         IEnumerable<TEntity> GetAll();
         void Insert(TEntity entity);
-        void Delete(TEntity entity);
+        void Delete(Tkey id);
         void Update(TEntity entity);
     }
 }

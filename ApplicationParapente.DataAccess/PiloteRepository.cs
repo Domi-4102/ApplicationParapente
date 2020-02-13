@@ -12,15 +12,19 @@ namespace ApplicationParapente.DataAccess
     public class PiloteRepository : IPiloteRepository
     {
         private readonly ParapenteContext _dataContext;
-        
+
         public PiloteRepository()
         {
-            _dataContext = new ParapenteContext();
+            var optionsBuilder = new DbContextOptionsBuilder<ParapenteContext>();
+
+            _dataContext = new ParapenteContext(optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Parapente").Options);
         }
 
-        void IRepository<Pilote, int>.Delete(Pilote entity)
+        void IRepository<Pilote, int>.Delete(int id)
         {
-            _dataContext.Set<Pilote>().Remove(entity);
+            Pilote p = _dataContext.Set<Pilote>().FirstOrDefault(e => e.IdPilote == id);
+            _dataContext.Set<Pilote>().Remove(p);
+            _dataContext.SaveChanges();
         }
 
         IEnumerable<Pilote> IRepository<Pilote, int>.GetAll()
@@ -36,11 +40,25 @@ namespace ApplicationParapente.DataAccess
         void IRepository<Pilote, int>.Insert(Pilote entity)
         {
             _dataContext.Set<Pilote>().Add(entity);
+            _dataContext.SaveChanges();
         }
 
         void IRepository<Pilote, int>.Update(Pilote entity)
         {
-            var editedEntity = _dataContext.Set<Pilote>().FirstOrDefault(e => e.IdPilote == entity.IdPilote);
+            var EntityToEdit = _dataContext.Set<Pilote>().Where(e => e.IdPilote == entity.IdPilote).FirstOrDefault();
+
+            if (EntityToEdit != null)
+            {
+                EntityToEdit.Nom= entity.Nom ;
+                EntityToEdit.Prenom = entity.Prenom;
+                EntityToEdit.Poids = entity.Poids;
+                EntityToEdit.Adresse =entity.Adresse;
+                EntityToEdit.Tel = entity.Tel;
+                EntityToEdit.IdFonction = entity.IdFonction;
+                
+                _dataContext.SaveChanges();
+            }
+            
         }
     }
 }
