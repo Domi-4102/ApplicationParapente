@@ -9,6 +9,7 @@ namespace ApplicationParapente.DataModel
     [Table("PILOTE")]
     public partial class Pilote
     {
+        #region Constructor Region
         public Pilote()
         {
             Encadre = new HashSet<Encadre>();
@@ -16,8 +17,10 @@ namespace ApplicationParapente.DataModel
             Passe = new HashSet<Passe>();
             Paye = new HashSet<Paye>();
             Vol = new HashSet<Vol>();
-        }
+        } 
+        #endregion
 
+        #region Properties region
         [Key]
         [Column("Id_Pilote")]
         public int IdPilote { get; set; }
@@ -33,7 +36,9 @@ namespace ApplicationParapente.DataModel
         public string Tel { get; set; }
         [Column("Id_Fonction")]
         public int IdFonction { get; set; }
+        #endregion
 
+        #region Relationship region
         [ForeignKey(nameof(IdFonction))]
         [InverseProperty(nameof(Fonction.Pilote))]
         public virtual Fonction IdFonctionNavigation { get; set; }
@@ -46,6 +51,7 @@ namespace ApplicationParapente.DataModel
         [InverseProperty("IdPiloteNavigation")]
         public virtual ICollection<Paye> Paye { get; set; }
         [InverseProperty("IdPiloteNavigation")]
-        public virtual ICollection<Vol> Vol { get; set; }
+        public virtual ICollection<Vol> Vol { get; set; } 
+        #endregion
     }
 }
