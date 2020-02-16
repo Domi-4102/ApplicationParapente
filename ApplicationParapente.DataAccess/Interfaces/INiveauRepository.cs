@@ -1,5 +1,4 @@
-﻿using Parapente.Data;
-using Parapente.Data.Entities;
+﻿using ApplicationParapente.DataModel;
 using System;
 using System.Collections.Generic;
 using System.Text;

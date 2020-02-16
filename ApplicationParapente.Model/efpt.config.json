@@ -1,0 +1,82 @@
+﻿{
+   "ContextClassName": "ParapenteContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "DoNotCombineNamespace": false,
+   "IdReplace": false,
+   "IncludeConnectionString": true,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": null,
+   "ProjectRootNamespace": "ApplicationParapente.DataModel",
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[BREVET]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[COTISATION]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[Encadre]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[FONCTION]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[MODELE_PARAPENTE]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[NIVEAU]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[Obtient]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[PARAPENTE]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[Passe]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[Paye]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[PILOTE]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[SITE_ATTERISSAGE]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[SITE_DECOLLAGE]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[STAGE]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[Vol]"
+      }
+   ],
+   "UseDatabaseNames": false,
+   "UseFluentApiOnly": false,
+   "UseHandleBars": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseSpatial": false
+}

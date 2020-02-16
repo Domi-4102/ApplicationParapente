@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using ApplicationParapente.DataAccess.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using Parapente.Data;
-using Parapente.Data.Entities;
+using ApplicationParapente.DataModel;
 
 namespace ApplicationParapente.DataAccess
 {

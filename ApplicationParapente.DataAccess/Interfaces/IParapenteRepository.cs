@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Parapente.Data.Entities;
+using ApplicationParapente.DataModel;
 
 namespace ApplicationParapente.DataAccess.Interfaces
 {
-    public interface IParapenteRepository:IRepository<Parapente.Data.Entities.Parapente, int>
+    public interface IParapenteRepository:IRepository<Parapente, int>
     {
     }
 }
