@@ -34,6 +34,7 @@ namespace ApplicationParapente.DataModel
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Parapente");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
