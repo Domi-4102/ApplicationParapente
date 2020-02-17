@@ -5,14 +5,14 @@ using System.Text;
 
 namespace ApplicationParapente.DataModel
 {
-    class Fonction
+    class Function
     {
-        public Fonction()
+        public Function()
         {
 
         }
         [Key]
-        public int id { get; set; }
+        public int Id { get; set; }
         public string  Label { get; set; }
     }
 }
