@@ -13,6 +13,7 @@ namespace ApplicationParapente.DataModel
 
         }
 
+        #region Properties Region
         [Key]
         public int Id { get; set; }
         public string LastName { get; set; }
@@ -20,7 +21,14 @@ namespace ApplicationParapente.DataModel
         public decimal Weight { get; set; }
         public string Adress { get; set; }
         public string Tel { get; set; }
-        public Function Function { get; set; }
+        #endregion
+        #region Relationship Region
+        public virtual Function Function { get; set; }
+        public virtual ICollection<Certificate> Certificates{ get; set; }
+        public virtual ICollection<Internship> Internships { get; set; }
+        public virtual ICollection<MembershipFee> MembershipFees { get; set; }
+        public virtual ICollection<Fly> Flies { get; set; }
+        #endregion
 
 
     }

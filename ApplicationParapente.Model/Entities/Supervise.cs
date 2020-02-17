@@ -6,6 +6,7 @@ namespace ApplicationParapente.DataModel
 {
     public class Supervise
     {
-
+        public Pilote Pilote { get; set; }
+        public Internship Internship { get; set; }
     }
 }
