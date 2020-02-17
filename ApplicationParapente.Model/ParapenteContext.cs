@@ -19,7 +19,7 @@ namespace ApplicationParapente.DataModel
         public virtual DbSet<Brevet> Brevet { get; set; }
         public virtual DbSet<Cotisation> Cotisation { get; set; }
         public virtual DbSet<Encadre> Encadre { get; set; }
-        public virtual DbSet<Fonction> Fonction { get; set; }
+        public virtual DbSet<Function> Fonction { get; set; }
         public virtual DbSet<ModeleParapente> ModeleParapente { get; set; }
         public virtual DbSet<Niveau> Niveau { get; set; }
         public virtual DbSet<Obtient> Obtient { get; set; }
@@ -77,7 +77,7 @@ namespace ApplicationParapente.DataModel
                     .HasConstraintName("FK__Encadre__Id_Stag__412EB0B6");
             });
 
-            modelBuilder.Entity<Fonction>(entity =>
+            modelBuilder.Entity<Function>(entity =>
             {
                 entity.HasKey(e => e.IdFonction)
                     .HasName("PK__FONCTION__91F04474B198408F");
