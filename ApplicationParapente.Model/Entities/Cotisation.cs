@@ -5,14 +5,12 @@ using System.Text;
 
 namespace ApplicationParapente.DataModel.Entities
 {
-    class Fonction
+    class Cotisation
     {
-        public Fonction()
-        {
+        public Cotisation() { }
 
-        }
         [Key]
-        public int id { get; set; }
-        public string  Label { get; set; }
+        public DateTime AmountYear { get; set; }
+        public decimal Amount { get; set; }
     }
 }
