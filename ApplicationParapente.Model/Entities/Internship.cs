@@ -16,6 +16,8 @@ namespace ApplicationParapente.DataModel
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public int Price { get; set; }
+         public Level Level { get; set; }
+        public Certificate Certificate { get; set; }
 
     }
 }

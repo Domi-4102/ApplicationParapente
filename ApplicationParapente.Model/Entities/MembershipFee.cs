@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ApplicationParapente.DataModel
 {
-    class MembershipFee
+    public class MembershipFee
     {
         public MembershipFee() 
         { 
