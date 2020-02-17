@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ApplicationParapente.DataModel.Entities
 {
-    class Cotisation
+    public class Cotisation
     {
         public Cotisation() { }
 
