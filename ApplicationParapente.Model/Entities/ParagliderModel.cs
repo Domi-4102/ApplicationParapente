@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ApplicationParapente.DataModel
 {
-    class ParagliderModel
+    public class ParagliderModel
     {
         public ParagliderModel() { }
 

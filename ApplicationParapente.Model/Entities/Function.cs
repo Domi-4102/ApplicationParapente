@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ApplicationParapente.DataModel
 {
-    class Function
+    public class Function
     {
         public Function()
         {

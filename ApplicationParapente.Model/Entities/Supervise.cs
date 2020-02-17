@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ApplicationParapente.DataModel
 {
-    class Supervise
+    public class Supervise
     {
 
     }

@@ -17,10 +17,10 @@ namespace ApplicationParapente.DataModel
         public int Id { get; set; }
         public string LastName { get; set; }
         public string FirstName { get; set; }
-        public decimal Poids { get; set; }
+        public decimal Weight { get; set; }
         public string Adress { get; set; }
         public string Tel { get; set; }
-       // public Fonction Foction { }
+        public Function Function { get; set; }
 
 
     }

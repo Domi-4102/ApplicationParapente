@@ -9,14 +9,7 @@ namespace ApplicationParapente.DataModel.Entities
     {
         public Pay() { }
 
-//        CREATE TABLE Pay(
-//   Id SMALLINT,
-//   AmountYear DATE,
-//   DateCotisation DATE,
-//   PRIMARY KEY(Id, AmountYear),
-//   FOREIGN KEY(Id) REFERENCES PILOTE(Id),
-//   FOREIGN KEY(AmountYear) REFERENCES COTISATION(AmountYear)
-//);
+
         [Key]
         public int Id { get; set; }
         public DateTime AmountYear { get; set; }

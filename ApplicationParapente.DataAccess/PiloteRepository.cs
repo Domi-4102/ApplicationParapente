@@ -21,7 +21,7 @@ namespace ApplicationParapente.DataAccess
 
         void IRepository<Pilote, int>.Delete(int id)
         {
-            Pilote p = _dataContext.Set<Pilote>().FirstOrDefault(e => e.IdPilote == id);
+            Pilote p = _dataContext.Set<Pilote>().FirstOrDefault(e => e.Id == id);
             _dataContext.Set<Pilote>().Remove(p);
             _dataContext.SaveChanges();
         }
@@ -33,7 +33,7 @@ namespace ApplicationParapente.DataAccess
 
         Pilote IRepository<Pilote, int>.GetById(int id)
         {
-            return _dataContext.Set<Pilote>().FirstOrDefault(e => e.IdPilote == id);
+            return _dataContext.Set<Pilote>().FirstOrDefault(e => e.Id == id);
         }
 
         void IRepository<Pilote, int>.Insert(Pilote entity)
@@ -44,16 +44,16 @@ namespace ApplicationParapente.DataAccess
 
         void IRepository<Pilote, int>.Update(Pilote entity)
         {
-            var EntityToEdit = _dataContext.Set<Pilote>().Where(e => e.IdPilote == entity.IdPilote).FirstOrDefault();
+            var EntityToEdit = _dataContext.Set<Pilote>().Where(e => e.Id == entity.Id).FirstOrDefault();
 
             if (EntityToEdit != null)
             {
-                EntityToEdit.Nom= entity.Nom ;
-                EntityToEdit.Prenom = entity.Prenom;
-                EntityToEdit.Poids = entity.Poids;
-                EntityToEdit.Adresse =entity.Adresse;
+                EntityToEdit.LastName= entity.LastName ;
+                EntityToEdit.FirstName = entity.FirstName;
+                EntityToEdit.Weight = entity.Weight;
+                EntityToEdit.Adress =entity.Adress;
                 EntityToEdit.Tel = entity.Tel;
-                EntityToEdit.IdFonction = entity.IdFonction;
+                EntityToEdit.Function = entity.Function;
                 
                 _dataContext.SaveChanges();
             }
