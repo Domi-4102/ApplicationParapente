@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace ApplicationParapente.DataModel.Entities
-{
+namespace ApplicationParapente.DataModel
+{ 
     public class Pilote
     {
         public Pilote()
