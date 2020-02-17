@@ -1,25 +1,15 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace ApplicationParapente.DataModel
+namespace ApplicationParapente.DataModel.Entities
 {
-    [Table("FONCTION")]
-    public partial class Fonction
+    class Fonction
     {
         public Fonction()
         {
-            Pilote = new HashSet<Pilote>();
+
         }
-
-        [Key]
-        [Column("Id_Fonction")]
-        public int IdFonction { get; set; }
-        [Required]
-        [StringLength(50)]
-        public string Label { get; set; }
-
-        [InverseProperty("IdFonctionNavigation")]
-        public virtual ICollection<Pilote> Pilote { get; set; }
+        public int id { get; set; }
     }
 }
