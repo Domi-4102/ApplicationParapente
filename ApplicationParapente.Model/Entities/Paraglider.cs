@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ApplicationParapente.DataModel.Entities
+namespace ApplicationParapente.DataModel
 {
     public class Paraglider
     {

@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace ApplicationParapente.DataModel.Entities
+namespace ApplicationParapente.DataModel
 {
-    public class Cotisation
+    class MembershipFee
     {
-        public Cotisation() { }
+        public MembershipFee() 
+        { 
+
+        }
 
         [Key]
         public DateTime AmountYear { get; set; }
