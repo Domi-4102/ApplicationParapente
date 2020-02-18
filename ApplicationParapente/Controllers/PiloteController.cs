@@ -10,46 +10,46 @@ namespace ApplicationParapente.Controllers
     [ApiController]
     public class PiloteController : ControllerBase
     {
-        private readonly IPiloteRepository _piloteRepository;
-        public PiloteController(IPiloteRepository piloteRepository)
+        private readonly IPilotRepository _pilotRepository;
+        public PiloteController(IPilotRepository piloteRepository)
         {
-            _piloteRepository = piloteRepository;
+            _pilotRepository = piloteRepository;
         }
 
         // GET: api/Pilote
         [HttpGet]
-        public IEnumerable<Pilote> Get()
+        public IEnumerable<Pilot> Get()
         {
-            return _piloteRepository.GetAll();
+            return _pilotRepository.GetAll();
         }
 
         // GET: api/Pilote/5
         [HttpGet("{id}", Name = "Get")]
-        public Pilote Get(int id)
+        public Pilot Get(int id)
         {
-            return _piloteRepository.GetById(id);
+            return _pilotRepository.GetById(id);
         }
 
         // POST: api/Pilote
         [HttpPost]
-        public void Post([FromBody] Pilote entity)
+        public void Post([FromBody] Pilot entity)
         {
-            _piloteRepository.Insert(entity);
+            _pilotRepository.Insert(entity);
         }
 
         // PUT: api/Pilote/5
         [HttpPut("{id}")]
-        public void Put(int id,[FromBody] Pilote entity)
+        public void Put(int id,[FromBody] Pilot entity)
         {
-            entity.IdPilote = id;
-            _piloteRepository.Update(entity);
+            entity.Id = id;
+            _pilotRepository.Update(entity);
         }
 
         // DELETE: /api/Pilote/2
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            _piloteRepository.Delete(id);
+            _pilotRepository.Delete(id);
         }
     }
 }

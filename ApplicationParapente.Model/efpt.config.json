@@ -1,0 +1,82 @@
+﻿{
+   "ContextClassName": "ParagliderContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "DoNotCombineNamespace": false,
+   "IdReplace": false,
+   "IncludeConnectionString": true,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Entities",
+   "ProjectRootNamespace": "ApplicationParapente.DataModel",
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[Certificate]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[Fly]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[FONCTION]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[Internship]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[LandingSite]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[LaunchingSite]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[Level]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[MemberShipFee]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[Obtain]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[Paraglider]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[ParagliderModel]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[Pay]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[PILOT]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[supervise]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[Take]"
+      }
+   ],
+   "UseDatabaseNames": false,
+   "UseFluentApiOnly": false,
+   "UseHandleBars": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseSpatial": false
+}

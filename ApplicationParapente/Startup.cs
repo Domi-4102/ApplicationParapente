@@ -31,7 +31,7 @@ namespace ApplicationParapente
         {
 
 
-            services.AddTransient<IPiloteRepository, PiloteRepository>();
+            services.AddTransient<IPilotRepository, PilotRepository>();
 
             services.AddMvc();
         }

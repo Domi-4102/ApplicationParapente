@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ApplicationParapente.DataAccess.Interfaces
 {
-    public interface IPiloteRepository: IRepository<Pilote,int>
+    public interface IPilotRepository: IRepository<Pilot,int>
     {
     }
 }

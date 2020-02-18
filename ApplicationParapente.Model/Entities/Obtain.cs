@@ -6,20 +6,21 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ApplicationParapente.DataModel.Entities
 {
-    [Table("supervise")]
-    public partial class Supervise
+    public partial class Obtain
     {
         [Key]
         public short Id { get; set; }
         [Key]
-        [Column("Id_Internship")]
-        public int IdInternship { get; set; }
+        [Column("Id_Certificate")]
+        public int IdCertificate { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime? ObtainingDate { get; set; }
 
-        [ForeignKey(nameof(IdInternship))]
-        [InverseProperty(nameof(Internship.Supervise))]
-        public virtual Internship IdInternshipNavigation { get; set; }
+        [ForeignKey(nameof(IdCertificate))]
+        [InverseProperty(nameof(Certificate.Obtain))]
+        public virtual Certificate IdCertificateNavigation { get; set; }
         [ForeignKey(nameof(Id))]
-        [InverseProperty(nameof(Pilot.Supervise))]
+        [InverseProperty(nameof(Pilot.Obtain))]
         public virtual Pilot IdNavigation { get; set; }
     }
 }
