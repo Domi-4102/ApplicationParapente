@@ -17,7 +17,7 @@ namespace ApplicationParapente.DataAccess
         {
             var optionsBuilder = new DbContextOptionsBuilder<ParagliderContext>();
 
-            _dataContext = new ParagliderContext(optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Parapente").Options);
+            _dataContext = new ParagliderContext(optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Paraglider").Options);
         }
 
         void IRepository<Pilot, int>.Delete(int id)

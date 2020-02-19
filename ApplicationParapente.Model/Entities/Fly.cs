@@ -18,7 +18,7 @@ namespace ApplicationParapente.DataModel.Entities
         [Column("Id_LaunchingSite")]
         public int IdLaunchingSite { get; set; }
         [Column("Id_PILOT")]
-        public short IdPilot { get; set; }
+        public int IdPilot { get; set; }
         [Column("Id_Paraglider")]
         public int IdParaglider { get; set; }
 

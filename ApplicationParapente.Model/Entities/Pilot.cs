@@ -19,7 +19,7 @@ namespace ApplicationParapente.DataModel.Entities
         }
 
         [Key]
-        public short Id { get; set; }
+        public int Id { get; set; }
         [StringLength(100)]
         public string LastName { get; set; }
         [StringLength(100)]

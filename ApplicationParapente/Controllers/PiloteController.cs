@@ -2,16 +2,17 @@
 using ApplicationParapente.DataAccess.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using ApplicationParapente.DataModel;
+using ApplicationParapente.DataModel.Entities;
 
 namespace ApplicationParapente.Controllers
 {
 
     [Route("api/[controller]")]
     [ApiController]
-    public class PiloteController : ControllerBase
+    public class PilotController : ControllerBase
     {
         private readonly IPilotRepository _pilotRepository;
-        public PiloteController(IPilotRepository piloteRepository)
+        public PilotController(IPilotRepository piloteRepository)
         {
             _pilotRepository = piloteRepository;
         }
