@@ -5,18 +5,19 @@ using System.Text;
 using ApplicationParapente.DataAccess.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using ApplicationParapente.DataModel;
+using ApplicationParapente.DataModel.Entities;
 
 namespace ApplicationParapente.DataAccess
 {
     public class PilotRepository : IPilotRepository
     {
-        private readonly ParapenteContext _dataContext;
+        private readonly ParagliderContext _dataContext;
 
-        public PiloteRepository()
+        public PilotRepository()
         {
-            var optionsBuilder = new DbContextOptionsBuilder<ParapenteContext>();
+            var optionsBuilder = new DbContextOptionsBuilder<ParagliderContext>();
 
-            _dataContext = new ParapenteContext(optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Parapente").Options);
+            _dataContext = new ParagliderContext(optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Parapente").Options);
         }
 
         void IRepository<Pilot, int>.Delete(int id)
