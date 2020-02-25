@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ApplicationParapente.DataModel.Entities
 {
-    public partial class LaunchingSite
+    public partial class LaunchingSite : Model
     {
         public LaunchingSite()
         {

@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ApplicationParapente.DataModel.Entities
 {
-    public partial class Pay
+    public partial class Pay : Model
     {
         [Key]
         public short Id { get; set; }

@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ApplicationParapente.DataModel.Entities
 {
-    public partial class Fly
+    public partial class Fly : Model
     {
         [Key]
         public int Id { get; set; }

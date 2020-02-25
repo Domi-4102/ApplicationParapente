@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ApplicationParapente.DataModel.Entities
 {
-    public partial class Obtain
+    public partial class Obtain : Model
     {
         [Key]
         public short Id { get; set; }

@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ApplicationParapente.DataModel.Entities
 {
-    public partial class Certificate
+    public partial class Certificate : Model
     {
         public Certificate()
         {

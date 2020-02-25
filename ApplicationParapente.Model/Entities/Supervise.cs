@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ApplicationParapente.DataModel.Entities
 {
     [Table("supervise")]
-    public partial class Supervise
+    public partial class Supervise : Model
     {
         [Key]
         public short Id { get; set; }

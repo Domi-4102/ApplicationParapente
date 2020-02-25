@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ApplicationParapente.DataModel.Entities
 {
     [Table("PILOT")]
-    public partial class Pilot
+    public partial class Pilot : Model
     {
         public Pilot()
         {

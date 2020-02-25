@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ApplicationParapente.DataModel.Entities
 {
-    public partial class ParagliderModel
+    public partial class ParagliderModel : Model
     {
         public ParagliderModel()
         {

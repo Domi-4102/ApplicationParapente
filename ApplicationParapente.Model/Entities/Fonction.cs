@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ApplicationParapente.DataModel.Entities
 {
     [Table("FONCTION")]
-    public partial class Fonction
+    public partial class Fonction : Model
     {
         public Fonction()
         {
