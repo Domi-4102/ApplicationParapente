@@ -1,8 +1,7 @@
-﻿using System.Collections.Generic;
-using ApplicationParapente.DataAccess.Interfaces;
-using Microsoft.AspNetCore.Mvc;
-using ApplicationParapente.DataModel;
+﻿using ApplicationParapente.DataAccess;
 using ApplicationParapente.DataModel.Entities;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace ApplicationParapente.Controllers
 {
@@ -11,8 +10,8 @@ namespace ApplicationParapente.Controllers
     [ApiController]
     public class PilotController : ControllerBase
     {
-        private readonly IPilotRepository _pilotRepository;
-        public PilotController(IPilotRepository piloteRepository)
+        private readonly Repository<Pilot,int> _pilotRepository;
+        public PilotController(Repository<Pilot, int> piloteRepository)
         {
             _pilotRepository = piloteRepository;
         }
@@ -48,9 +47,9 @@ namespace ApplicationParapente.Controllers
 
         // DELETE: /api/Pilote/2
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public void Delete(Pilot pilot)
         {
-            _pilotRepository.Delete(id);
+            _pilotRepository.Delete(pilot);
         }
     }
 }
