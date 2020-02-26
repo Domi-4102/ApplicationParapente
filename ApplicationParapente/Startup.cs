@@ -14,6 +14,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using ApplicationParapente.DataModel;
+using ApplicationParapente.DataModel.Entities;
 
 namespace ApplicationParapente
 {
@@ -31,7 +32,7 @@ namespace ApplicationParapente
         {
 
 
-            services.AddTransient<IPilotRepository, PilotRepository>();
+            services.AddTransient<Repository<Pilot,int>, PilotRepository>();
 
             services.AddMvc();
         }
