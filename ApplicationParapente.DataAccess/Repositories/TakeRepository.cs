@@ -8,7 +8,7 @@ namespace ApplicationParapente.DataAccess.Repositories
     class TakeRepository : Repository<Take, int>
     {
 
-        public TakeRepository(ParagliderContext context) : base(context) { }
+        public TakeRepository(ParagliderContext context) : base() { }
 
 
     }

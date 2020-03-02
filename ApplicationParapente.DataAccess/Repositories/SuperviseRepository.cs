@@ -8,7 +8,7 @@ namespace ApplicationParapente.DataAccess.Repositories
     class SuperviseRepository : Repository<Supervise, int>
     {
 
-        public SuperviseRepository(ParagliderContext context) : base(context) { }
+        public SuperviseRepository(ParagliderContext context) : base() { }
 
 
     }

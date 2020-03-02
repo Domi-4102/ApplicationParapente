@@ -9,7 +9,7 @@ namespace ApplicationParapente.DataModel.Entities
     public partial class Obtain : Model
     {
         [Key]
-        public short Id { get; set; }
+        public int Id { get; set; }
         [Key]
         [Column("Id_Certificate")]
         public int IdCertificate { get; set; }

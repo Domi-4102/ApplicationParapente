@@ -5,7 +5,7 @@ namespace ApplicationParapente.DataAccess.Repositories
     class FlyRepository : Repository<Fly, int>
     {
 
-        public FlyRepository(ParagliderContext context) : base(context) { }
+        public FlyRepository(ParagliderContext context) : base() { }
 
 
     }

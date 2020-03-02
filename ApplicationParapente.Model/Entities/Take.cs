@@ -9,7 +9,7 @@ namespace ApplicationParapente.DataModel.Entities
     public partial class Take : Model
     {
         [Key]
-        public short Id { get; set; }
+        public int Id { get; set; }
         [Key]
         [Column("Id_Internship")]
         public int IdInternship { get; set; }

@@ -13,12 +13,17 @@ namespace ApplicationParapente.DataAccess
         private readonly ParagliderContext m_dataContext;
       
 
-        public Repository(ParagliderContext dataContext)
+        //public Repository(ParagliderContext dataContext)
+        //{
+        //    m_dataContext = dataContext;
+        //}
+
+        public Repository()
         {
-            m_dataContext = dataContext;
+            var optionsBuilder = new DbContextOptionsBuilder<ParagliderContext>();
+
+            m_dataContext = new ParagliderContext(optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Parapente").Options);
         }
-
-
 
         public virtual void Delete(TEntity entity)
         {

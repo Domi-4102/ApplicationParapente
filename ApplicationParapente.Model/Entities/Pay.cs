@@ -9,7 +9,7 @@ namespace ApplicationParapente.DataModel.Entities
     public partial class Pay : Model
     {
         [Key]
-        public short Id { get; set; }
+        public int Id { get; set; }
         [Key]
         [Column(TypeName = "date")]
         public DateTime AmountYear { get; set; }

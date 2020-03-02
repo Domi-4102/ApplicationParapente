@@ -8,7 +8,7 @@ namespace ApplicationParapente.DataAccess.Repositories
     class ObtainRepository : Repository<Obtain, int>
     {
 
-        public ObtainRepository(ParagliderContext context) : base(context) { }
+        public ObtainRepository(ParagliderContext context) : base() { }
 
 
     }

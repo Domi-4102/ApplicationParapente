@@ -8,7 +8,7 @@ namespace ApplicationParapente.DataAccess.Repositories
     class FonctionRepository : Repository<Fonction, int>
     {
 
-        public FonctionRepository(ParagliderContext context) : base(context) { }
+        public FonctionRepository(ParagliderContext context) : base() { }
 
 
     }

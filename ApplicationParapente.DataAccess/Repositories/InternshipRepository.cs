@@ -8,7 +8,7 @@ namespace ApplicationParapente.DataAccess.Repositories
     class InternShipRepository : Repository<Internship, int>
     {
 
-        public InternShipRepository(ParagliderContext context) : base(context) { }
+        public InternShipRepository(ParagliderContext context) : base() { }
 
 
     }
