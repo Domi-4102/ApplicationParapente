@@ -16,36 +16,36 @@ namespace ApplicationParapente.Controllers
             _pilotRepository = piloteRepository;
         }
 
-        // GET: api/Pilote
+        // GET: api/Pilot
         [HttpGet]
         public IEnumerable<Pilot> Get()
         {
             return _pilotRepository.GetAll();
         }
 
-        // GET: api/Pilote/5
+        // GET: api/Pilot/5
         [HttpGet("{id}", Name = "Get")]
         public Pilot Get(int id)
         {
             return _pilotRepository.GetById(id);
         }
 
-        // POST: api/Pilote
+        // POST: api/Pilot
         [HttpPost]
         public void Post([FromBody] Pilot entity)
         {
             _pilotRepository.Insert(entity);
         }
 
-        // PUT: api/Pilote/5
+        // PUT: api/Pilot/5
         [HttpPut("{id}")]
-        public void Put(int id,[FromBody] Pilot entity)
+        public void Put(int id, [FromBody] Pilot entity)
         {
             entity.Id = id;
             _pilotRepository.Update(entity);
         }
 
-        // DELETE: /api/Pilote/2
+        // DELETE: /api/Pilot/2
         [HttpDelete("{id}")]
         public void Delete(Pilot pilot)
         {
