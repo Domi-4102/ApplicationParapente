@@ -8,7 +8,7 @@ namespace ApplicationParapente.DataAccess
     public interface IRepositoryAsync<TEntity, Tkey>
     {
         Task<TEntity> GetByIdAsync(Tkey id);
-        Task<IEnumerable<TEntity>> GetAllAsync();
+        Task<List<TEntity>> GetAllAsync();
         void InsertAsync(TEntity entity);
         void DeleteAsync(TEntity entity);
         void UpdateAsync(TEntity entity);
