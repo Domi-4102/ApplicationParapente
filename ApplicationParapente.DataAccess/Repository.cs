@@ -22,7 +22,7 @@ namespace ApplicationParapente.DataAccess
         {
             var optionsBuilder = new DbContextOptionsBuilder<ParagliderContext>();
 
-            m_dataContext = new ParagliderContext(optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Parapente").Options);
+            m_dataContext = new ParagliderContext(optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Paraglider").Options);
         }
 
         public virtual void Delete(TEntity entity)
