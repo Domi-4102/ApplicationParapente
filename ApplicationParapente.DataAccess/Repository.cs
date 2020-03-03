@@ -13,11 +13,6 @@ namespace ApplicationParapente.DataAccess
         private readonly ParagliderContext m_dataContext;
       
 
-        //public Repository(ParagliderContext dataContext)
-        //{
-        //    m_dataContext = dataContext;
-        //}
-
         public Repository()
         {
             var optionsBuilder = new DbContextOptionsBuilder<ParagliderContext>();

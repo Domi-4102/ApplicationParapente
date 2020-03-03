@@ -21,10 +21,10 @@ namespace ApplicationParapente.DataAccess
         public virtual void DeleteAsync(TEntity entity)
         {
             m_dataContext.Set<TEntity>().Remove(entity);
-            m_dataContext.SaveChangesAsync();
+            m_dataContext.SaveChanges();
         }
 
-        public virtual async  Task<List<TEntity>> GetAllAsync()
+        public virtual async Task<List<TEntity>> GetAllAsync()
         {
             return await m_dataContext.Set<TEntity>().ToListAsync();
         }
@@ -36,8 +36,8 @@ namespace ApplicationParapente.DataAccess
 
         public virtual void InsertAsync(TEntity entity)
         {
-             m_dataContext.Set<TEntity>().AddAsync(entity);
-             m_dataContext.SaveChangesAsync();
+            m_dataContext.Set<TEntity>().Add(entity);
+             m_dataContext.SaveChanges();
         }
 
         public virtual async void UpdateAsync(TEntity entity)

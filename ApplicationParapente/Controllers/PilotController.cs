@@ -8,7 +8,7 @@ namespace ApplicationParapente.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
-    public class PilotController : ControllerBase
+    public class PilotController : Controller
     {
         private readonly Repository<Pilot,int> _pilotRepository;
         public PilotController(Repository<Pilot, int> piloteRepository)
