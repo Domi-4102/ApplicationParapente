@@ -23,6 +23,7 @@ namespace ApplicationParapente
 
 
             services.AddTransient<Repository<Pilot,int>, PilotRepository>();
+            services.AddTransient<RepositoryAsync<Pilot, int>, PilotRepositoryAsync>();
 
             services.AddMvc();
         }
@@ -43,7 +44,7 @@ namespace ApplicationParapente
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                endpoints.MapDefaultControllerRoute();
             });
         }
     }

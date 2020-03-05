@@ -1,10 +1,7 @@
-﻿using ApplicationParapente.DataAccess;
-using ApplicationParapente.DataModel.Entities;
+﻿using ApplicationParapente.DataModel.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace ApplicationParapente.DataAccess
 {

@@ -1,13 +1,11 @@
 ﻿using ApplicationParapente.DataModel.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace ApplicationParapente.DataAccess
 {
-    public class RepositoryAsync<TEntity, Tkey> : IRepositoryAsync <TEntity, Tkey> where TEntity : ApplicationParapente.DataModel.Model
+    public class RepositoryAsync<TEntity, Tkey> : IRepositoryAsync<TEntity, Tkey> where TEntity : DataModel.Model
     {
         private readonly ParagliderContext m_dataContext;
       
@@ -18,10 +16,10 @@ namespace ApplicationParapente.DataAccess
             m_dataContext = new ParagliderContext(optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Paraglider").Options);
         }
 
-        public virtual void DeleteAsync(TEntity entity)
+        public virtual async Task DeleteAsync(TEntity entity)
         {
             m_dataContext.Set<TEntity>().Remove(entity);
-            m_dataContext.SaveChanges();
+            await m_dataContext.SaveChangesAsync();
         }
 
         public virtual async Task<List<TEntity>> GetAllAsync()
@@ -34,13 +32,13 @@ namespace ApplicationParapente.DataAccess
             return await m_dataContext.Set<TEntity>().FindAsync(id);
         }
 
-        public virtual void InsertAsync(TEntity entity)
+        public virtual async Task InsertAsync(TEntity entity)
         {
             m_dataContext.Set<TEntity>().Add(entity);
-             m_dataContext.SaveChanges();
+            await m_dataContext.SaveChangesAsync();
         }
 
-        public virtual async void UpdateAsync(TEntity entity)
+        public virtual async Task UpdateAsync(TEntity entity)
         {
             m_dataContext.Entry(entity).State = EntityState.Modified;
             await m_dataContext.SaveChangesAsync();

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace ApplicationParapente.DataAccess
@@ -9,8 +7,8 @@ namespace ApplicationParapente.DataAccess
     {
         Task<TEntity> GetByIdAsync(Tkey id);
         Task<List<TEntity>> GetAllAsync();
-        void InsertAsync(TEntity entity);
-        void DeleteAsync(TEntity entity);
-        void UpdateAsync(TEntity entity);
+        Task InsertAsync(TEntity entity);
+        Task DeleteAsync(TEntity entity);
+        Task UpdateAsync(TEntity entity);
     }
 }
