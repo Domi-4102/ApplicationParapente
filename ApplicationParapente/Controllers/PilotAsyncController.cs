@@ -18,7 +18,7 @@ namespace ApplicationParapente.Controllers
             _pilotRepository = piloteRepository;
         }
 
-        // GET: api/async/Pilot
+        // GET: api/async/PilotAsync
         [HttpGet]
         public async Task<IEnumerable<Pilot>> GetAsync()
         {
@@ -51,9 +51,10 @@ namespace ApplicationParapente.Controllers
 
         // DELETE: api/async/Pilot/206
         [HttpDelete("{id}")]
-        public async Task DeleteAsync(Pilot pilot)
+        public async Task DeleteAsync(int id, [FromBody]Pilot entity)
         {
-            await _pilotRepository.DeleteAsync(pilot);
+            entity.Id = id;
+            await _pilotRepository.DeleteAsync(entity);
         }
     }
 }
