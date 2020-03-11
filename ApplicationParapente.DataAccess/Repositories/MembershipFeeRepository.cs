@@ -5,10 +5,10 @@ using System.Text;
 
 namespace ApplicationParapente.DataAccess.Repositories
 {
-    class MembershipFeeRepository : Repository<MemberShipFee, int>
+    class MemberShipFeeRepository : Repository<MemberShipFee, int>
     {
 
-        public MembershipFeeRepository() : base() { }
+        public MemberShipFeeRepository() : base() { }
 
 
     }
