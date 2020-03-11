@@ -11,7 +11,7 @@ namespace ApplicationParapente.Controllers.Repositories
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class MemberShipFeeController : GenericAsyncController<MemberShipFee, int>
+    public class MemberShipFeeController : GenericController<MemberShipFee, int>
     {
         public MemberShipFeeController(RepositoryAsync<MemberShipFee, int> Repository) : base(Repository)
         {

@@ -11,7 +11,7 @@ namespace ApplicationParapente.Controllers.Repositories
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ObtainController : GenericAsyncController<Obtain, int>
+    public class ObtainController : GenericController<Obtain, int>
     {
         public ObtainController(RepositoryAsync<Obtain, int> Repository) : base(Repository)
         {

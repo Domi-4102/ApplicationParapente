@@ -11,7 +11,7 @@ namespace ApplicationParapente.Controllers.Repositories
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CertificateController : GenericAsyncController<Certificate, int>
+    public class CertificateController : GenericController<Certificate, int>
     {
         public CertificateController(RepositoryAsync<Certificate, int> Repository) : base(Repository)
         {

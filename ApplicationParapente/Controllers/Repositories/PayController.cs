@@ -11,7 +11,7 @@ namespace ApplicationParapente.Controllers.Repositories
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PayController : GenericAsyncController<Pay, int>
+    public class PayController : GenericController<Pay, int>
     {
         public PayController(RepositoryAsync<Pay, int> Repository) : base(Repository)
         {

@@ -11,7 +11,7 @@ namespace ApplicationParapente.Controllers.Repositories
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class LevelController : GenericAsyncController<Level, int>
+    public class LevelController : GenericController<Level, int>
     {
         public LevelController(RepositoryAsync<Level, int> Repository) : base(Repository)
         {
