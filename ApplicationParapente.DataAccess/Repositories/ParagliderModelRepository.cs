@@ -2,10 +2,10 @@
 
 namespace ApplicationParapente.DataAccess.Repositories
 {
-    class ParagliderModelRepository : Repository<ParagliderModel, int>
+    class ParagliderModelRepository : RepositoryAsync<ParagliderModel, int>
     {
 
-        public ParagliderModelRepository(ParagliderContext context) : base() { }
+        public ParagliderModelRepository() : base() { }
 
 
     }

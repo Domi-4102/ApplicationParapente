@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApplicationParapente.DataModel.Migrations
 {
     [DbContext(typeof(ParagliderContext))]
-    [Migration("20200303090637_Paraglinder-noshort")]
-    partial class Paraglindernoshort
+    [Migration("20200316143901_Paraglider-noshort")]
+    partial class Paraglidernoshort
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

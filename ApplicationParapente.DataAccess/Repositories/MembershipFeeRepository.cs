@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ApplicationParapente.DataAccess.Repositories
 {
-    class MemberShipFeeRepository : Repository<MemberShipFee, int>
+    class MemberShipFeeRepository : RepositoryAsync<MemberShipFee, int>
     {
 
         public MemberShipFeeRepository() : base() { }

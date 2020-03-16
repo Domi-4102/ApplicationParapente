@@ -5,10 +5,10 @@ using System.Text;
 
 namespace ApplicationParapente.DataAccess.Repositories
 {
-    class LandingSiteRepository : Repository<LandingSite, int>
+    class LandingSiteRepository : RepositoryAsync<LandingSite, int>
     {
 
-        public LandingSiteRepository(ParagliderContext context) : base() { }
+        public LandingSiteRepository() : base() { }
 
 
     }

@@ -3,7 +3,7 @@ using ApplicationParapente.DataModel.Entities;
 
 namespace ApplicationParapente.DataAccess
 {
-    public class PilotRepository :Repository<Pilot,int>
+    public class PilotRepository : RepositoryAsync<Pilot,int>
     {
 
         public PilotRepository() : base() { }

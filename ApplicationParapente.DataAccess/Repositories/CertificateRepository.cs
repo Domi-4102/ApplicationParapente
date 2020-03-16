@@ -2,10 +2,10 @@
 
 namespace ApplicationParapente.DataAccess.Repositories
 {
-    class CertificateRepository : Repository<Certificate, int>
+    class CertificateRepository : RepositoryAsync<Certificate, int>
     {
 
-        public CertificateRepository(ParagliderContext context) : base() { }
+        public CertificateRepository() : base() { }
 
 
     }

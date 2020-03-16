@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ApplicationParapente.DataModel.Migrations
 {
-    public partial class Paraglider : Migration
+    public partial class Paraglidernoshort : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -64,7 +64,7 @@ namespace ApplicationParapente.DataModel.Migrations
                 name: "PILOT",
                 columns: table => new
                 {
-                    Id = table.Column<short>(nullable: false),
+                    Id = table.Column<int>(nullable: false),
                     LastName = table.Column<string>(unicode: false, maxLength: 100, nullable: true),
                     FirstName = table.Column<string>(unicode: false, maxLength: 100, nullable: true),
                     Weight = table.Column<decimal>(type: "decimal(15, 2)", nullable: true),
@@ -168,7 +168,7 @@ namespace ApplicationParapente.DataModel.Migrations
                 name: "Pay",
                 columns: table => new
                 {
-                    Id = table.Column<short>(nullable: false),
+                    Id = table.Column<int>(nullable: false),
                     AmountYear = table.Column<DateTime>(type: "date", nullable: false),
                     DateCotisation = table.Column<DateTime>(type: "date", nullable: true)
                 },
@@ -214,7 +214,7 @@ namespace ApplicationParapente.DataModel.Migrations
                 name: "Obtain",
                 columns: table => new
                 {
-                    Id = table.Column<short>(nullable: false),
+                    Id = table.Column<int>(nullable: false),
                     Id_Certificate = table.Column<int>(nullable: false),
                     ObtainingDate = table.Column<DateTime>(type: "date", nullable: true)
                 },
@@ -244,7 +244,7 @@ namespace ApplicationParapente.DataModel.Migrations
                     Duration = table.Column<TimeSpan>(nullable: true),
                     Id_LandingSite = table.Column<int>(nullable: false),
                     Id_LaunchingSite = table.Column<int>(nullable: false),
-                    Id_PILOT = table.Column<short>(nullable: false),
+                    Id_PILOT = table.Column<int>(nullable: false),
                     Id_Paraglider = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -280,7 +280,7 @@ namespace ApplicationParapente.DataModel.Migrations
                 name: "supervise",
                 columns: table => new
                 {
-                    Id = table.Column<short>(nullable: false),
+                    Id = table.Column<int>(nullable: false),
                     Id_Internship = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -304,7 +304,7 @@ namespace ApplicationParapente.DataModel.Migrations
                 name: "Take",
                 columns: table => new
                 {
-                    Id = table.Column<short>(nullable: false),
+                    Id = table.Column<int>(nullable: false),
                     Id_Internship = table.Column<int>(nullable: false),
                     examen = table.Column<bool>(nullable: false),
                     Payement = table.Column<bool>(nullable: true)

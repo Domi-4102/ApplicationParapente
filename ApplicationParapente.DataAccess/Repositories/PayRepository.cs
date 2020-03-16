@@ -5,11 +5,10 @@ using System.Text;
 
 namespace ApplicationParapente.DataAccess.Repositories
 {
-    class payRepository : Repository<Pay, int>
+    class PayRepository : RepositoryAsync<Pay, int>
     {
-
-        public payRepository(ParagliderContext context) : base() { }
-
-
+        public PayRepository()
+        {
+        }
     }
 }

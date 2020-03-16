@@ -20,12 +20,25 @@ namespace ApplicationParapente
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-
-            services.AddTransient<Repository<Pilot,int>, PilotRepository>();
-            services.AddTransient<RepositoryAsync<Pilot, int>, PilotRepositoryAsync>();
+            AddTransientDependencies(services);
 
             services.AddMvc();
+        }
+
+        private static void AddTransientDependencies(IServiceCollection services)
+        {
+            services.AddTransient<RepositoryAsync<Pilot, int>, RepositoryAsync<Pilot, int>>();
+            services.AddTransient<RepositoryAsync<Fonction, int>, RepositoryAsync<Fonction, int>>();
+            services.AddTransient<RepositoryAsync<Certificate, int>, RepositoryAsync<Certificate, int>>();
+            services.AddTransient<RepositoryAsync<Fly, int>, RepositoryAsync<Fly, int>>();
+            services.AddTransient<RepositoryAsync<Internship, int>, RepositoryAsync<Internship, int>>();
+            services.AddTransient<RepositoryAsync<LandingSite, int>, RepositoryAsync<LandingSite, int>>();
+            services.AddTransient<RepositoryAsync<LaunchingSite, int>, RepositoryAsync<LaunchingSite, int>>();
+            services.AddTransient<RepositoryAsync<LandingSite, int>, RepositoryAsync<LandingSite, int>>();
+            services.AddTransient<RepositoryAsync<Pay, int>, RepositoryAsync<Pay, int>>();
+            services.AddTransient<RepositoryAsync<Pilot, int>, RepositoryAsync<Pilot, int>>();
+            services.AddTransient<RepositoryAsync<Supervise, int>, RepositoryAsync<Supervise, int>>();
+            services.AddTransient<RepositoryAsync<Take, int>, RepositoryAsync<Take, int>>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

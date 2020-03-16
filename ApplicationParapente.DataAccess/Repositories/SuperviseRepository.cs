@@ -5,10 +5,10 @@ using System.Text;
 
 namespace ApplicationParapente.DataAccess.Repositories
 {
-    class SuperviseRepository : Repository<Supervise, int>
+    class SuperviseRepository : RepositoryAsync<Supervise, int>
     {
 
-        public SuperviseRepository(ParagliderContext context) : base() { }
+        public SuperviseRepository() : base() { }
 
 
     }
