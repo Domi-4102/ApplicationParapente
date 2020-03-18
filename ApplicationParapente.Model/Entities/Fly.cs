@@ -9,6 +9,7 @@ namespace ApplicationParapente.DataModel.Entities
     public partial class Fly : Model
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Column(TypeName = "date")]
         public DateTime? DateFly { get; set; }

@@ -14,6 +14,7 @@ namespace ApplicationParapente.DataModel.Entities
         }
 
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required]
         [StringLength(50)]

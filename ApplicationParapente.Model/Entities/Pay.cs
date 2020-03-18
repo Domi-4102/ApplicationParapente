@@ -9,6 +9,7 @@ namespace ApplicationParapente.DataModel.Entities
     public partial class Pay : Model
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Key]
         [Column(TypeName = "date")]

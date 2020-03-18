@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApplicationParapente.DataModel.Migrations
 {
     [DbContext(typeof(ParagliderContext))]
-    [Migration("20200316143901_Paraglider-noshort")]
-    partial class Paraglidernoshort
+    [Migration("20200318131639_Paraglider")]
+    partial class Paraglider
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,7 +24,9 @@ namespace ApplicationParapente.DataModel.Migrations
             modelBuilder.Entity("ApplicationParapente.DataModel.Entities.Certificate", b =>
                 {
                     b.Property<int>("Id")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("IdLevel")
                         .HasColumnName("Id_Level")
@@ -46,7 +48,9 @@ namespace ApplicationParapente.DataModel.Migrations
             modelBuilder.Entity("ApplicationParapente.DataModel.Entities.Fly", b =>
                 {
                     b.Property<int>("Id")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime?>("DateFly")
                         .HasColumnType("date");
@@ -86,7 +90,9 @@ namespace ApplicationParapente.DataModel.Migrations
             modelBuilder.Entity("ApplicationParapente.DataModel.Entities.Fonction", b =>
                 {
                     b.Property<int>("Id")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Label")
                         .IsRequired()
@@ -102,7 +108,9 @@ namespace ApplicationParapente.DataModel.Migrations
             modelBuilder.Entity("ApplicationParapente.DataModel.Entities.Internship", b =>
                 {
                     b.Property<int>("Id")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime?>("EndDate")
                         .HasColumnType("date");
@@ -127,7 +135,9 @@ namespace ApplicationParapente.DataModel.Migrations
             modelBuilder.Entity("ApplicationParapente.DataModel.Entities.LandingSite", b =>
                 {
                     b.Property<int>("Id")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Description")
                         .HasColumnType("varchar(100)")
@@ -156,7 +166,9 @@ namespace ApplicationParapente.DataModel.Migrations
             modelBuilder.Entity("ApplicationParapente.DataModel.Entities.LaunchingSite", b =>
                 {
                     b.Property<int>("Id")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Description")
                         .HasColumnType("varchar(250)")
@@ -185,7 +197,9 @@ namespace ApplicationParapente.DataModel.Migrations
             modelBuilder.Entity("ApplicationParapente.DataModel.Entities.Level", b =>
                 {
                     b.Property<int>("Id")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Description")
                         .HasColumnType("varchar(50)")
@@ -205,6 +219,7 @@ namespace ApplicationParapente.DataModel.Migrations
             modelBuilder.Entity("ApplicationParapente.DataModel.Entities.MemberShipFee", b =>
                 {
                     b.Property<DateTime>("AmountYear")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("date");
 
                     b.Property<decimal?>("Amount")
@@ -219,7 +234,9 @@ namespace ApplicationParapente.DataModel.Migrations
             modelBuilder.Entity("ApplicationParapente.DataModel.Entities.Obtain", b =>
                 {
                     b.Property<int>("Id")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("IdCertificate")
                         .HasColumnName("Id_Certificate")
@@ -239,7 +256,9 @@ namespace ApplicationParapente.DataModel.Migrations
             modelBuilder.Entity("ApplicationParapente.DataModel.Entities.Paraglider", b =>
                 {
                     b.Property<int>("Id")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("IdLevel")
                         .HasColumnName("Id_Level")
@@ -261,7 +280,9 @@ namespace ApplicationParapente.DataModel.Migrations
             modelBuilder.Entity("ApplicationParapente.DataModel.Entities.ParagliderModel", b =>
                 {
                     b.Property<int>("Id")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("HomologationDate")
                         .HasColumnType("varchar(50)")
@@ -297,7 +318,9 @@ namespace ApplicationParapente.DataModel.Migrations
             modelBuilder.Entity("ApplicationParapente.DataModel.Entities.Pay", b =>
                 {
                     b.Property<int>("Id")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("AmountYear")
                         .HasColumnType("date");
@@ -316,7 +339,9 @@ namespace ApplicationParapente.DataModel.Migrations
             modelBuilder.Entity("ApplicationParapente.DataModel.Entities.Pilot", b =>
                 {
                     b.Property<int>("Id")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Adress")
                         .HasColumnType("varchar(300)")
@@ -355,7 +380,9 @@ namespace ApplicationParapente.DataModel.Migrations
             modelBuilder.Entity("ApplicationParapente.DataModel.Entities.Supervise", b =>
                 {
                     b.Property<int>("Id")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("IdInternship")
                         .HasColumnName("Id_Internship")
@@ -372,7 +399,9 @@ namespace ApplicationParapente.DataModel.Migrations
             modelBuilder.Entity("ApplicationParapente.DataModel.Entities.Take", b =>
                 {
                     b.Property<int>("Id")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("IdInternship")
                         .HasColumnName("Id_Internship")

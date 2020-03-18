@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ApplicationParapente.DataModel.Migrations
 {
-    public partial class Paraglidernoshort : Migration
+    public partial class Paraglider : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -11,7 +11,8 @@ namespace ApplicationParapente.DataModel.Migrations
                 name: "FONCTION",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Label = table.Column<string>(unicode: false, maxLength: 50, nullable: false)
                 },
                 constraints: table =>
@@ -23,7 +24,8 @@ namespace ApplicationParapente.DataModel.Migrations
                 name: "Level",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Label = table.Column<string>(unicode: false, maxLength: 50, nullable: true),
                     Description = table.Column<string>(unicode: false, maxLength: 50, nullable: true)
                 },
@@ -48,7 +50,8 @@ namespace ApplicationParapente.DataModel.Migrations
                 name: "ParagliderModel",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     NumberOfHomologation = table.Column<string>(unicode: false, maxLength: 50, nullable: false),
                     HomologationDate = table.Column<string>(unicode: false, maxLength: 50, nullable: true),
                     Size = table.Column<decimal>(type: "decimal(15, 2)", nullable: true),
@@ -64,7 +67,8 @@ namespace ApplicationParapente.DataModel.Migrations
                 name: "PILOT",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     LastName = table.Column<string>(unicode: false, maxLength: 100, nullable: true),
                     FirstName = table.Column<string>(unicode: false, maxLength: 100, nullable: true),
                     Weight = table.Column<decimal>(type: "decimal(15, 2)", nullable: true),
@@ -87,7 +91,8 @@ namespace ApplicationParapente.DataModel.Migrations
                 name: "Certificate",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Label = table.Column<string>(unicode: false, maxLength: 50, nullable: false),
                     Id_Level = table.Column<int>(nullable: false)
                 },
@@ -106,7 +111,8 @@ namespace ApplicationParapente.DataModel.Migrations
                 name: "LandingSite",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(unicode: false, maxLength: 100, nullable: true),
                     Orientation = table.Column<string>(type: "text", nullable: true),
                     Description = table.Column<string>(unicode: false, maxLength: 100, nullable: true),
@@ -127,7 +133,8 @@ namespace ApplicationParapente.DataModel.Migrations
                 name: "LaunchingSite",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(unicode: false, maxLength: 100, nullable: true),
                     Orientation = table.Column<string>(type: "text", nullable: true),
                     Description = table.Column<string>(unicode: false, maxLength: 250, nullable: true),
@@ -148,7 +155,8 @@ namespace ApplicationParapente.DataModel.Migrations
                 name: "Paraglider",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     ServiceDate = table.Column<DateTime>(type: "date", nullable: true),
                     LastUseService = table.Column<DateTime>(type: "date", nullable: true),
                     Id_Level = table.Column<int>(nullable: false)
@@ -168,7 +176,8 @@ namespace ApplicationParapente.DataModel.Migrations
                 name: "Pay",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     AmountYear = table.Column<DateTime>(type: "date", nullable: false),
                     DateCotisation = table.Column<DateTime>(type: "date", nullable: true)
                 },
@@ -193,7 +202,8 @@ namespace ApplicationParapente.DataModel.Migrations
                 name: "Internship",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     StartDate = table.Column<DateTime>(type: "date", nullable: true),
                     EndDate = table.Column<DateTime>(type: "date", nullable: true),
                     Price = table.Column<decimal>(type: "decimal(15, 2)", nullable: true),
@@ -214,7 +224,8 @@ namespace ApplicationParapente.DataModel.Migrations
                 name: "Obtain",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Id_Certificate = table.Column<int>(nullable: false),
                     ObtainingDate = table.Column<DateTime>(type: "date", nullable: true)
                 },
@@ -239,7 +250,8 @@ namespace ApplicationParapente.DataModel.Migrations
                 name: "Fly",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     DateFly = table.Column<DateTime>(type: "date", nullable: true),
                     Duration = table.Column<TimeSpan>(nullable: true),
                     Id_LandingSite = table.Column<int>(nullable: false),
@@ -280,7 +292,8 @@ namespace ApplicationParapente.DataModel.Migrations
                 name: "supervise",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Id_Internship = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -304,7 +317,8 @@ namespace ApplicationParapente.DataModel.Migrations
                 name: "Take",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Id_Internship = table.Column<int>(nullable: false),
                     examen = table.Column<bool>(nullable: false),
                     Payement = table.Column<bool>(nullable: true)

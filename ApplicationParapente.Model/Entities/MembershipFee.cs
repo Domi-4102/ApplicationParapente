@@ -14,6 +14,7 @@ namespace ApplicationParapente.DataModel.Entities
         }
 
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column(TypeName = "date")]
         public DateTime AmountYear { get; set; }
         [Column(TypeName = "decimal(15, 2)")]

@@ -14,10 +14,17 @@ namespace ApplicationParapente.Controllers
     public class GenericController<TEntity, Tkey> : ControllerBase where TEntity : DataModel.Model
     {
         private readonly RepositoryAsync<TEntity,Tkey> _Repository;
+        public GenericController()
+        {
+
+        }
+
         public GenericController(RepositoryAsync<TEntity, Tkey> Repository)
         {
             _Repository = Repository;
         }
+
+        
 
         // GET: api/[controller]
         [HttpGet]
@@ -36,10 +43,21 @@ namespace ApplicationParapente.Controllers
         }
 
         // POST: api/[controller]
+
         [HttpPost]
         public async Task Post([FromBody] TEntity entity)
         {
-            await _Repository.InsertAsync(entity);
+                await _Repository.InsertAsync(entity);
+        }
+
+        [HttpPost("List")]
+        public async Task Post([FromBody] List<TEntity> entities)
+        {
+            foreach (var entity in entities)
+            {
+                await _Repository.InsertAsync(entity);
+            }
+            
         }
 
         // PUT: api/[controller]/205

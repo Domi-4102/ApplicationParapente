@@ -45,7 +45,7 @@ namespace ApplicationParapente.DataModel.Entities
         {
             modelBuilder.Entity<Certificate>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                
 
                 entity.Property(e => e.Label).IsUnicode(false);
 
@@ -58,7 +58,7 @@ namespace ApplicationParapente.DataModel.Entities
 
             modelBuilder.Entity<Fly>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                
 
                 entity.HasOne(d => d.IdLandingSiteNavigation)
                     .WithMany(p => p.Fly)
@@ -87,14 +87,14 @@ namespace ApplicationParapente.DataModel.Entities
 
             modelBuilder.Entity<Fonction>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                
 
                 entity.Property(e => e.Label).IsUnicode(false);
             });
 
             modelBuilder.Entity<Internship>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                
 
                 entity.HasOne(d => d.IdCertificateNavigation)
                     .WithMany(p => p.Internship)
@@ -105,7 +105,7 @@ namespace ApplicationParapente.DataModel.Entities
 
             modelBuilder.Entity<LandingSite>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+               
 
                 entity.Property(e => e.Description).IsUnicode(false);
 
@@ -120,7 +120,7 @@ namespace ApplicationParapente.DataModel.Entities
 
             modelBuilder.Entity<LaunchingSite>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                
 
                 entity.Property(e => e.Description).IsUnicode(false);
 
@@ -135,7 +135,7 @@ namespace ApplicationParapente.DataModel.Entities
 
             modelBuilder.Entity<Level>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                
 
                 entity.Property(e => e.Description).IsUnicode(false);
 
@@ -168,7 +168,7 @@ namespace ApplicationParapente.DataModel.Entities
 
             modelBuilder.Entity<Paraglider>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+               
 
                 entity.HasOne(d => d.IdLevelNavigation)
                     .WithMany(p => p.Paraglider)
@@ -183,7 +183,7 @@ namespace ApplicationParapente.DataModel.Entities
                     .HasName("UQ__Paraglid__1B6B7341D68F3614")
                     .IsUnique();
 
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                
 
                 entity.Property(e => e.HomologationDate).IsUnicode(false);
 
@@ -212,7 +212,7 @@ namespace ApplicationParapente.DataModel.Entities
 
             modelBuilder.Entity<Pilot>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                
 
                 entity.Property(e => e.Adress).IsUnicode(false);
 
