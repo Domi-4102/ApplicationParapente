@@ -13,15 +13,15 @@ namespace ApplicationParapente.Controllers
     [ApiController]
     public class GenericController<TEntity, Tkey> : ControllerBase where TEntity : DataModel.Model
     {
-        private readonly RepositoryAsync<TEntity,Tkey> _Repository;
+        private readonly RepositoryAsync<TEntity,Tkey> _repository;
         public GenericController()
         {
 
         }
 
-        public GenericController(RepositoryAsync<TEntity, Tkey> Repository)
+        public GenericController(RepositoryAsync<TEntity, Tkey> repository)
         {
-            _Repository = Repository;
+            _repository = repository;
         }
 
         
@@ -31,7 +31,7 @@ namespace ApplicationParapente.Controllers
         public async Task<IEnumerable<TEntity>> Get()
         {
 
-            return await _Repository.GetAllAsync();
+            return await _repository.GetAllAsync();
   
         }
 
@@ -39,7 +39,7 @@ namespace ApplicationParapente.Controllers
         [HttpGet("{id}")]
         public async Task<TEntity> Get(Tkey id)
         {
-            return await _Repository.GetByIdAsync(id);
+            return await _repository.GetByIdAsync(id);
         }
 
         // POST: api/[controller]
@@ -47,7 +47,7 @@ namespace ApplicationParapente.Controllers
         [HttpPost]
         public async Task Post([FromBody] TEntity entity)
         {
-                await _Repository.InsertAsync(entity);
+                await _repository.InsertAsync(entity);
         }
 
         [HttpPost("List")]
@@ -55,7 +55,7 @@ namespace ApplicationParapente.Controllers
         {
             foreach (var entity in entities)
             {
-                await _Repository.InsertAsync(entity);
+                await _repository.InsertAsync(entity);
             }
             
         }
@@ -72,7 +72,7 @@ namespace ApplicationParapente.Controllers
             {
                 myPropertyInfo.SetValue(entity,id);
             }
-            await _Repository.UpdateAsync(entity);
+            await _repository.UpdateAsync(entity);
         }
 
         // DELETE: api/[controller]/206
@@ -87,7 +87,7 @@ namespace ApplicationParapente.Controllers
             {
                 myPropertyInfo.SetValue(entity, id);
             }
-            await _Repository.DeleteAsync(entity);
+            await _repository.DeleteAsync(entity);
         }
     }
 }
