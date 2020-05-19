@@ -43,7 +43,7 @@ namespace ApplicationParapente.DataModel.Migrations
                     b.ToTable("Certificate");
                 });
 
-            modelBuilder.Entity("ApplicationParapente.DataModel.Entities.Fly", b =>
+            modelBuilder.Entity("ApplicationParapente.DataModel.Entities.Flight", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -429,28 +429,28 @@ namespace ApplicationParapente.DataModel.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("ApplicationParapente.DataModel.Entities.Fly", b =>
+            modelBuilder.Entity("ApplicationParapente.DataModel.Entities.Flight", b =>
                 {
                     b.HasOne("ApplicationParapente.DataModel.Entities.LandingSite", "IdLandingSiteNavigation")
-                        .WithMany("Fly")
+                        .WithMany("Flight")
                         .HasForeignKey("IdLandingSite")
                         .HasConstraintName("FK__Fly__Id_LandingS__403A8C7D")
                         .IsRequired();
 
                     b.HasOne("ApplicationParapente.DataModel.Entities.LaunchingSite", "IdLaunchingSiteNavigation")
-                        .WithMany("Fly")
+                        .WithMany("Flight")
                         .HasForeignKey("IdLaunchingSite")
                         .HasConstraintName("FK__Fly__Id_Launchin__412EB0B6")
                         .IsRequired();
 
                     b.HasOne("ApplicationParapente.DataModel.Entities.Paraglider", "IdParagliderNavigation")
-                        .WithMany("Fly")
+                        .WithMany("Flight")
                         .HasForeignKey("IdParaglider")
                         .HasConstraintName("FK__Fly__Id_Paraglid__4222D4EF")
                         .IsRequired();
 
                     b.HasOne("ApplicationParapente.DataModel.Entities.Pilot", "IdPilotNavigation")
-                        .WithMany("Fly")
+                        .WithMany("Flight")
                         .HasForeignKey("IdPilot")
                         .HasConstraintName("FK__Fly__Id_PILOT__4316F928")
                         .IsRequired();

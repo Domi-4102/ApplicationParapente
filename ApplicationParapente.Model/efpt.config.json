@@ -18,7 +18,7 @@
       },
       {
          "HasPrimaryKey": true,
-         "Name": "[dbo].[Fly]"
+         "Name": "[dbo].[Flight]"
       },
       {
          "HasPrimaryKey": true,
