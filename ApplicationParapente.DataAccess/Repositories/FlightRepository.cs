@@ -2,10 +2,10 @@
 
 namespace ApplicationParapente.DataAccess.Repositories
 {
-    class FlyRepository : RepositoryAsync<Fly, int>
+    class FlightRepository : RepositoryAsync<Flight, int>
     {
 
-        public FlyRepository() : base() { }
+        public FlightRepository() : base() { }
 
 
     }

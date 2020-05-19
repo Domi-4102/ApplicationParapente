@@ -11,9 +11,9 @@ namespace ApplicationParapente.Controllers.Repositories
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class FlyController : GenericController<Fly, int>
+    public class FlightController : GenericController<Flight, int>
     {
-        public FlyController(RepositoryAsync<Fly, int> Repository) : base(Repository)
+        public FlightController(RepositoryAsync<Flight, int> Repository) : base(Repository)
         {
 
         }

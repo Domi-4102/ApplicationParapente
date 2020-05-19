@@ -30,7 +30,7 @@ namespace ApplicationParapente
             services.AddTransient<RepositoryAsync<Pilot, int>, RepositoryAsync<Pilot, int>>();
             services.AddTransient<RepositoryAsync<Fonction, int>, RepositoryAsync<Fonction, int>>();
             services.AddTransient<RepositoryAsync<Certificate, int>, RepositoryAsync<Certificate, int>>();
-            services.AddTransient<RepositoryAsync<Fly, int>, RepositoryAsync<Fly, int>>();
+            services.AddTransient<RepositoryAsync<Flight, int>, RepositoryAsync<Flight, int>>();
             services.AddTransient<RepositoryAsync<Internship, int>, RepositoryAsync<Internship, int>>();
             services.AddTransient<RepositoryAsync<LandingSite, int>, RepositoryAsync<LandingSite, int>>();
             services.AddTransient<RepositoryAsync<LaunchingSite, int>, RepositoryAsync<LaunchingSite, int>>();
